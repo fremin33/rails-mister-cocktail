@@ -1,0 +1,8 @@
+<h1>Nom du Cocktail : </h1>
+<h1><%= @cocktail.name %> </h1>
+<%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.input :ingredient_id, as: :radio_buttons,
+        collection: @ingredients, wrapper: :vertical_radio_and_checkboxes %>
+    <%= f.input :description %>
+    <%= f.submit %>
+    <% end  %>

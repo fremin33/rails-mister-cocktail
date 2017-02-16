@@ -1,0 +1,10 @@
+<div class="text-center">
+<h1>Bienvenue sur Mr Cocktails.com</h1>
+
+<h3>Selectionner un cocktail pour acceder à sa description</h3>
+<% @cocktails.each do |cocktail| %>
+<p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
+<% end %>
+
+<%= link_to 'Créer un Cocktails', new_cocktail_path, class: 'btn btn-primary' %>
+</div>
