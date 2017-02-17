@@ -1,0 +1,30 @@
+body {
+  margin: 0px;
+  background: linear-gradient(-225deg, rgba(137,255,253,0.3) 0%, rgba(239,50,214,0.3) 50%),
+}
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.banner p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  margin-bottom: 90px;
+}
+
+.round {
+  border-radius: 4px;
+}

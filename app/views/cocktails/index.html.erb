@@ -1,10 +1,33 @@
-<div class="text-center">
-<h1>Bienvenue sur Mr Cocktails.com</h1>
-
-<h3>Selectionner un cocktail pour acceder à sa description</h3>
-<% @cocktails.each do |cocktail| %>
-<p><%= link_to cocktail.name, cocktail_path(cocktail) %></p>
-<% end %>
-
-<%= link_to 'Créer un Cocktails', new_cocktail_path, class: 'btn btn-primary' %>
+<div class="card index-first">
+  <div class="card-category">Popular</div>
+  <div class="card-description">
+    <h2>Some stuff</h2>
+    <p>Very cool stuff, useful and smart</p>
+  </div>
+  <img class="card-user avatar" src="user.jpg">
+  <a class="card-link" href="#" ></a>
 </div>
+
+
+
+
+
+<div class="container text-center add">
+  <% @cocktails.each_slice(3) do |cocktails| %>
+    <div class="row">
+      <% cocktails.each do |cocktail| %>
+        <% if cocktail.photo? %>
+          <div class="col-xs-4">
+            <div class="card">
+              <%= cl_image_tag cocktail.photo.path, width: 350, height: 200, crop: :fill %>
+              <div class="card-category">Popular</div>
+              <div class="card-description"><h2>Some stuff</h2></div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
+

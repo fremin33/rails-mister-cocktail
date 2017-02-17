@@ -27,10 +27,6 @@ Ingredient.create(name: "Jus d'orange")
 Ingredient.create(name: "Grenadine")
 
 Cocktail.destroy_all
-Cocktail.create(name: "Mojito")
-Cocktail.create(name: "Pina Colada")
-Cocktail.create(name: "Tequila Sunrise")
-Cocktail.create(name: "Sangria")
-Cocktail.create(name: "Margarita")
+
 
 
