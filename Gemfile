@@ -47,9 +47,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem "bootstrap-sass"
-  gem "font-awesome-sass"
-  gem "autoprefixer-rails"
+
   gem "better_errors"
   gem "binding_of_caller"
 end
@@ -58,4 +56,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rspec-rails', group: [ :test ]
 
+gem "bootstrap-sass"
+gem "font-awesome-sass"
+gem "autoprefixer-rails"
 gem "simple_form"
