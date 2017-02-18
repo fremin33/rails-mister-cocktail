@@ -2,6 +2,7 @@ class CocktailsController < ApplicationController
 
   def index
     @cocktails = Cocktail.all
+    @cocktail_random = @cocktails.sample
   end
 
   def show
