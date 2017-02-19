@@ -1,42 +1,12 @@
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(137,255,253,0.3) 0%, rgba(239,50,214,0.3) 50%), url(<%= image_path 'home.jpg'  %>);">
-  <div class="banner-content">
-    <h1>Bienvenue sur Mister Cocktails</h1>
-    <p>Plein de recettes pour découvrir la magie des cocktails</p>
-    <%= link_to 'Enter', '#index_page', class: 'btn btn-primary round js-scrollTo' %>
-  </div>
-</div>
-
-<div class="container text-center add" id='index_page'>
-  <div class="row">
-    <div class="col-md-6 col-xs-12">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, perferendis! Accusantium aut harum at, eaque libero itaque quas, recusandae eius culpa ipsam veniam hic cumque vel laborum officiis, illum laudantium!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, perferendis! Accusantium aut harum at, eaque libero itaque quas, recusandae eius culpa ipsam veniam hic cumque vel laborum officiis, illum laudantium!</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, perferendis! Accusantium aut harum at, eaque libero itaque quas, recusandae eius culpa ipsam veniam hic cumque vel laborum officiis, illum laudantium!</p>
-      </div>
-    <div class="col-md-6 col-xs-12"">
-      <% if @cocktail_random.photo? %>
-      <div class="card">
-        <%= link_to cl_image_tag(@cocktail_random.photo.path, width: 350, height: 200, crop: :fill), cocktail_path(@cocktail_random) %>
-        <div class="card-description"><h2><%=@cocktail_random.name%></h2></div>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
-
-
-
-
-
-<div class="container text-center add" id='index_page'>
+<h2 class="text-center">La carte </h2>
+<div class="container text-center pad" id='index_page'>
   <% @cocktails.each_slice(3) do |cocktails| %>
   <div class="row">
     <% cocktails.each do |cocktail| %>
     <% if cocktail.photo? %>
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-md-4">
       <div class="card">
-        <%= link_to cl_image_tag(cocktail.photo.path, width: 350, height: 200, crop: :fill), cocktail_path(cocktail) %>
-        <div class="card-category"> lalalal</div>
+        <%= link_to cl_image_tag(cocktail.photo.path, width: 300, height: 200, crop: :fill), cocktail_path(cocktail) %>
         <div class="card-description"><h2><%=cocktail.name%></h2></div>
       </div>
     </div>

@@ -1,8 +1,10 @@
 class CocktailsController < ApplicationController
-
-  def index
+  def home
     @cocktails = Cocktail.all
     @cocktail_random = @cocktails.sample
+  end
+  def index
+    @cocktails = Cocktail.all
   end
 
   def show

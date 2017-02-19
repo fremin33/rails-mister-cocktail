@@ -1,0 +1,34 @@
+.media {
+  display: flex;
+  padding-top: 60px;
+}
+.media-body {
+  flex: 1 1 auto;
+  padding: 20px;
+}
+.media-body img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+}
+.media-aside {
+  flex: 0 0 400px;
+  padding: 30px;
+  align-self: stretch;
+  background: #F8F7F7;
+  border-left: 1px solid #f0efef;
+  h2 {
+  font-size: 15px;
+  }
+}
+.media-section {
+  margin: 40px auto;
+  background-size: cover;
+}
+.media-section:first-child {
+  margin-top: 0;
+}
+.media-section:last-child {
+  margin-bottom: 0;
+}
+

@@ -1,15 +1,21 @@
-<h1 class="text-center"><%= @cocktail.name %></h1>
-<% if @cocktail.photo? %>
-<%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
-<% end %>
-<h2>Voici les ingrédients pour fabriquer un <%= @cocktail.name %> </h2>
-<ul>
-  <% @cocktail.doses. each do |dose| %>
-  <li> <%= dose.description  %> de <%= dose.ingredient.name  %></li>
-  <% end  %>
-</ul>
-<h1><%= @cocktail.name %> </h1>
+<div class="media">
+  <div class="media-body">
+    <div class="media-section text-center">
+      <% if @cocktail.photo? %>
+        <%= cl_image_tag @cocktail.photo.path%>
+      <% end %>
+    </div>
+  </div>
+  <div class="media-aside">
+    <div class="media-section">
+      <h2>Voici les ingrédients pour fabriquer un <%= @cocktail.name %> </h2>
+        <% @cocktail.doses. each do |dose| %>
+          <li> <%= dose.description  %> de <%= dose.ingredient.name  %></li>
+        <% end  %>
+    </div>
+    <div class="media-section">
+      <%= render 'shared/form', cocktail: @cocktail, dose: @dose %>
+    </div>
+  </div>
+</div>
 
-
-<%= render 'shared/form', cocktail: @cocktail, dose: @dose %>
-<%= link_to "Back to Cocktails", cocktails_path, class: 'btn btn-primary' %>

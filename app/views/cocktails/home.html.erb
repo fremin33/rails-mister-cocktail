@@ -1,0 +1,26 @@
+<div class="banner" style="background-image: url(<%= image_path 'home.jpg'  %>);">
+  <div class="banner-content">
+    <h1>Bienvenue sur Mister Cocktails</h1>
+    <p>Plein de recettes pour découvrir la magie des cocktails</p>
+    <%= link_to '', '#index_page', class: 'js-scrollTo fa fa-arrow-down fa-2x' %>
+  </div>
+</div>
+
+<div class="container text-center full-screen" id='index_page'>
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, perferendis! Accusantium aut harum at, eaque libero itaque quas, recusandae eius culpa ipsam veniam hic cumque vel laborum officiis, illum laudantium!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, perferendis! Accusantium aut harum at, eaque libero itaque quas, recusandae eius culpa ipsam veniam hic cumque vel laborum officiis, illum laudantium!</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, perferendis! Accusantium aut harum at, eaque libero itaque quas, recusandae eius culpa ipsam veniam hic cumque vel laborum officiis, illum laudantium!</p>
+                  <%= link_to 'Découvre nos cocktails', cocktails_path, class: 'btn btn-primary' %>
+      </div>
+    <div class="col-md-6 col-xs-12"">
+      <% if @cocktail_random.photo? %>
+      <div class="card">
+        <%= link_to cl_image_tag(@cocktail_random.photo.path, width: 350, height: 200, crop: :fill), cocktail_path(@cocktail_random) %>
+        <div class="card-description"><h2><%=@cocktail_random.name%></h2></div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
